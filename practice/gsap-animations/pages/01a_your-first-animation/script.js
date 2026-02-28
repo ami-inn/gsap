@@ -1,3 +1,5 @@
+import gsap from 'gsap'
+
 gsap.to(".card", {
   opacity: 1,
   scale: 1,
@@ -12,4 +14,6 @@ gsap.to(".card", {
         duration: 0.5,
     })
   }
+
 });
+
