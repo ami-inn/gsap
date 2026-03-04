@@ -15,7 +15,7 @@ function updateIndicator(target) {
     width,
     x: offset,
     duration: 0.5,
-    ease: "back.out(1.7)",
+    ease: "back.out(1.7)", // powerinout without bound
   });
 }
 
