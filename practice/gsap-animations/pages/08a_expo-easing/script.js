@@ -36,7 +36,10 @@ fab.addEventListener("click", () => {
         y,
         opacity: 1,
         duration: 0.5,
-        ease: "elastic.out(1, 0.75)",
+        rotate: 360,
+        delay: i * 0.1, // Stagger the animation for each child
+        scale: 1,
+        ease: "expo.out",
       });
 
     });
@@ -46,9 +49,13 @@ fab.addEventListener("click", () => {
       gsap.to(child, {
         x: 0,
         y: 0,
+      
         opacity: 0,
         duration: 0.3,
-        ease: "elastic.in(1, 0.75)",
+        rotate: 0,
+        pointerEvents: "none", // Disable interaction when collapsed
+        scale: 0.5,
+        ease: "expo.in",
       });
     });
   }
